@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @piece.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @piece.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @piece.image.thumb.url %>
+</p>
+
+<%= link_to 'Edit', edit_piece_path(@piece) %> |
+<%= link_to 'Back', pieces_path %>
