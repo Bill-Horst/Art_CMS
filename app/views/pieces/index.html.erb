@@ -14,17 +14,47 @@
 
   <tbody>
     <% @pieces.each do |piece| %>
-      <tr>
-        <td><%= piece.name %></td>
-        <td><%= piece.description %></td>
-        <td><%= piece.image %></td>
-        <td><%= link_to 'Show', piece %></td>
-        <td><%= link_to 'Edit', edit_piece_path(piece) %></td>
-        <td><%= link_to 'Destroy', piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= piece.name %></td>
+      <td><%= piece.description %></td>
+      <td><%= piece.image %></td>
+      <td><%= link_to 'Show', piece %></td>
+      <td><%= link_to 'Edit', edit_piece_path(piece) %></td>
+      <td><%= link_to 'Destroy', piece, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
+
+<div class="container-fluid">
+  <div class="row">
+    <% @pieces.each do |piece| %>
+    <div class="col-xs-6 col-sm-4 col-md-3">
+
+      <div class="piece-set">
+
+        <div class="piece-set-image-background">
+          <%= image_tag piece.image.url, class: "piece-set-image" %>
+        </div>
+
+        <div class="piece-set-title">
+          <h2><%= piece.name %></h2>
+        </div>
+
+        <div class="piece-set-description">
+          <h4><%= piece.description %></h4>
+        </div>
+
+        <div class="piece-set-concept">
+          <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.</p>
+        </div>
+
+      </div> <!-- end class="piece-set" -->
+
+    </div>
+    <% end %>
+  </div>
+</div>
 
 <br>
 

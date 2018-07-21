@@ -1,3 +1,35 @@
 // Place all the styles related to the Pieces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.piece-set {
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px grey;
+}
+.piece-set-image-background {
+  background-color: lightgrey;
+  border-bottom: 1px solid black;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.piece-set-image {
+  height: auto;
+  left: 50%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate( -50%, -50%);
+  width: 100%;
+}
+.piece-set-title {
+  text-align: center;
+}
+.piece-set-description {
+  text-align: center;
+}
+.piece-set-concept {
+  text-align: justify;
+}
